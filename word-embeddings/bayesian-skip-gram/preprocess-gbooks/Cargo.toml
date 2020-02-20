@@ -1,0 +1,39 @@
+[package]
+name = "preprocess_gbooks"
+version = "0.1.0"
+authors = ["Anonymous"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+name = "google_books"
+path = "src/lib.rs"
+
+[[bin]]
+name = "mk_vocab"
+path = "src/mk_vocab.rs"
+
+[[bin]]
+name = "mk_npos"
+path = "src/mk_npos.rs"
+
+[[bin]]
+name = "sort_by_year"
+path = "src/sort_by_year.rs"
+
+[[bin]]
+name = "bench_buffered_gz_io"
+path = "src/bench_buffered_gz_io.rs"
+
+[dependencies]
+structopt = "0.3.2"
+flate2 = "1.0.12"
+failure = "0.1.5"
+log = { version = "0.4", features = ["std"] }
+stderrlog = "0.4.1"
+sprs = "0.6.5"
+byteorder = "1.3.2"
+fxhash = "0.2.1"
+fnv = "1.0.6"
+time = "0.1.42"
